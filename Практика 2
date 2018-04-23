@@ -1,0 +1,28 @@
+#include <iostream>   //Сидельнико Никита ИНБО-03-17
+#include <cstdlib>
+#include <math.h>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Rus");
+	float a = 4.8, b = -7.9, n, m;
+
+	if (a >= b) {
+		n = pow(a - b, 0.33);
+	}
+	else if (a < b) {
+		n = a * a + (a - b) / (sin(a*b));
+	}
+	if (n < b)
+		m = (n + a) / (-b) + pow(sin(a)*sin(a) - cos(b), 0.5);
+	else if (n == b)
+		m = b * b + tan(n*a);
+	else if (n > b) {
+		m = b * b*b + n * a*a;
+	}
+
+	cout << "a = " << a << "\nb = " << b << "\nn = " << n << "\nm = " << m << endl;
+	system("pause");
+	return 0;
+}
